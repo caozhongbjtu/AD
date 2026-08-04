@@ -19,7 +19,3 @@ The script_forecast.sh file contains all running commands. You can directly exec
 ```bash
 sh train.sh
 ```
-Alternatively, you can run an individual script, for example: 
-```bash 
-python train.py --data PSM --win_size 100 --batch_size 32 --epochs 10
-```
