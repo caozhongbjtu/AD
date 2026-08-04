@@ -12,6 +12,7 @@ sktime==0.33.0
 # Datasets
 
 Datasets can be downloaded from: https://drive.google.com/file/d/1XBEDLHQV8au5SyLqVneBNkqEOBIeUgDh/view?usp=sharing 
+
 After downloading, the data structure should be: all_datasets/anomaly_detection/*, where * represents the dataset names .
 # Running Scripts  
 
