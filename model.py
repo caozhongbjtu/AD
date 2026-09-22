@@ -92,9 +92,9 @@ class MultiScaleAutoencoder(nn.Module):
             fused_phase=self.cross_attn_phase[i](f_t,f_phase)
             fused=fused_amp+torch.sigmoid(self.phase_gate[i])*fused_phase
 
-            t_mean = t.mean(dim=2)
-            amp_mean = f_amp.mean(dim=2)
-            phase_mean = f_phase.mean(dim=2)
+            t_mean = t.mean(dim=1)
+            amp_mean = f_amp.mean(dim=1)
+            phase_mean = f_phase.mean(dim=1)
             loss_amp = self.consistency_loss_fn(t_mean, amp_mean)
             loss_phase = self.consistency_loss_fn(t_mean, phase_mean)
             consistency_losses.append(loss_amp+self.beta*loss_phase)
