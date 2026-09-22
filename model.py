@@ -74,8 +74,7 @@ class MultiScaleAutoencoder(nn.Module):
         for i,s in enumerate(self.scales):
             x_seg=self.segment(x,s)
             f_t=self.t_encoders[i](x_seg)
-            
-            
+                
             xf=torch.fft.rfft(x_seg,dim=-1,norm="ortho")
             amp=torch.abs(xf)
             phase=torch.angle(xf)
